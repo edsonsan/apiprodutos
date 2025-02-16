@@ -1,0 +1,95 @@
+{
+    "info": {
+        "_postman_id": "2c95feed-5e65-4f1e-8036-462e96e84b05",
+        "name": "API Produtos",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "Busca todos os Produtos",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost:8000/produtos",
+                    "path": [
+                        "produtos"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "Busca Produto peloID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "localhost:8000/produtos/7",
+                    "path": [
+                        "produtos",
+                        "7"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000"
+                }
+            }
+        },
+        {
+            "name": "Inclui novo Produto",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "localhost:8000/produtos",
+                    "path": [
+                        "produtos"
+                    ],
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\r\n    \"id\":34,\r\n    \"nome\": \"Tablet DEF\",\r\n    \"detalhes\": {\r\n        \"marca\": \"Marca C\",\r\n        \"preco\": 800.00,\r\n        \"estoque\": 20,\r\n        \"especificacoes\": {\r\n            \"tela\": \"10.1 polegadas\",\r\n            \"processador\": \"Snapdragon 660\",\r\n            \"memoria\": \"4GB RAM\",\r\n            \"armazenamento\": \"64GB\"\r\n        }\r\n    }\r\n}"
+                }
+            }
+        },
+        {
+            "name": "Altera produto",
+            "request": {
+                "method": "PATCH",
+                "url": {
+                    "raw": "http://localhost:8000/produtos/1",
+                    "path": [
+                        "produtos",
+                        "1"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\r\n  \"nome\": \"Smartphone XYZ Atualizado\",\r\n  \"detalhes\": {\r\n      \"marca\": \"Marca B\",\r\n      \"preco\": 1300.00,\r\n      \"estoque\": 6545,\r\n      \"especificacoes\": {\r\n          \"tela\": \"6.5 polegadas\",\r\n          \"processador\": \"Snapdragon 888\",\r\n          \"memoria\": \"8GB RAM\",\r\n          \"armazenamento\": \"128GB\"\r\n      }\r\n  }\r\n}"
+                }
+            }
+        }
+    ]
+}
