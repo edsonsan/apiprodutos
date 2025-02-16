@@ -23,6 +23,7 @@ print("*"*40)
 contador_id = max(int(k) for k in dbprodutos.keys()) + 1 if dbprodutos else 1
 print(contador_id)
 
+# Rota para retornar Todos os produtos
 @app.get('/produtos', response_model=Dict[str,Produto],
          summary="Retorna todos os Produtos",
          description="Retorna todos os Produtos",
@@ -30,6 +31,7 @@ print(contador_id)
 async def get_listaprodutos():
     return dbprodutos
 
+# Rota para retornar Produto pelo o ID
 @app.get('/produtos/{produto_id}', 
          description="Retorna o Produto do ID informado",
          summary="Retorna Curso pelo IDs",
@@ -42,6 +44,7 @@ async def get_idproduto(produto_id: str):
         )
     return dbprodutos[produto_id]
 
+# Rota para inserir novos produtos
 @app.post("/produtos", response_model=Produto, status_code=status.HTTP_201_CREATED)
 async def adicionar_produto(produto: Produto):
     global contador_id
@@ -49,4 +52,16 @@ async def adicionar_produto(produto: Produto):
     produto.id = contador_id  # Atribui o ID incremental ao produto
     dbprodutos[produto_id] = produto
     contador_id += 1  # Incrementa o contador para o próximo ID
+    return produto
+
+# Rota para atualizar um produto existente
+@app.patch("/produtos/{produto_id}", response_model=Produto)
+async def atualizar_produto(produto_id: str, produto: Produto):
+    if produto_id not in dbprodutos:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Produto não encontrado"
+        )
+    produto.id = produto_id
+    dbprodutos[produto_id] = produto
     return produto
