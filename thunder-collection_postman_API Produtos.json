@@ -1,6 +1,6 @@
 {
     "info": {
-        "_postman_id": "2c95feed-5e65-4f1e-8036-462e96e84b05",
+        "_postman_id": "d08288d7-14f9-45a0-a7a7-0f0969778d0f",
         "name": "API Produtos",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": ""
@@ -23,7 +23,7 @@
             }
         },
         {
-            "name": "Busca Produto peloID",
+            "name": "Busca Produto pelo ID",
             "request": {
                 "method": "GET",
                 "url": {
@@ -88,6 +88,24 @@
                         }
                     },
                     "raw": "{\r\n  \"nome\": \"Smartphone XYZ Atualizado\",\r\n  \"detalhes\": {\r\n      \"marca\": \"Marca B\",\r\n      \"preco\": 1300.00,\r\n      \"estoque\": 6545,\r\n      \"especificacoes\": {\r\n          \"tela\": \"6.5 polegadas\",\r\n          \"processador\": \"Snapdragon 888\",\r\n          \"memoria\": \"8GB RAM\",\r\n          \"armazenamento\": \"128GB\"\r\n      }\r\n  }\r\n}"
+                }
+            }
+        },
+        {
+            "name": "Remove um Produto pelo ID",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:8000/produtos/3",
+                    "path": [
+                        "produtos",
+                        "3"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8000"
                 }
             }
         }
