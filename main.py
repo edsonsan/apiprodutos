@@ -12,12 +12,14 @@ from models import Produto, Detalhes, Especificacoes
 global dbprodutos_json
 
 util.Cabecalho()
+
 # dbprodutos=util.InicializaArquivo()
 dbprodutos: Dict[str, Produto] = util.InicializaArquivo()
 app = FastAPI(title="QA br Treinamento REST - API PRODUTOS COM JSOM DE 3 NÍVEIS",  
               version= "1.0.0",         
               description="QAonline BR")
 print("")
+
 # print(dbprodutos)
 print("*"*40)
 contador_id = max(int(k) for k in dbprodutos.keys()) + 1 if dbprodutos else 1
@@ -65,3 +67,14 @@ async def atualizar_produto(produto_id: str, produto: Produto):
     produto.id = produto_id
     dbprodutos[produto_id] = produto
     return produto
+
+# Rota para deletar um produto pelo ID
+@app.delete("/produtos/{produto_id}", response_model=Produto)
+async def deletar_produto(produto_id: str):
+    if produto_id not in dbprodutos:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Produto não encontrado"
+        )
+    produto_deletado = dbprodutos.pop(produto_id)
+    return produto_deletado
