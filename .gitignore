@@ -172,6 +172,6 @@ cython_debug/
 .pypirc
 
 # Meus arquivos
- ambiente.bat
+ ambienta.bat
  sonar-scanner.properties
  .scannerwork
