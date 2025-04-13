@@ -1,6 +1,6 @@
 {
     "info": {
-        "_postman_id": "d08288d7-14f9-45a0-a7a7-0f0969778d0f",
+        "_postman_id": "86bf26cf-8e23-41fb-924c-4182b334003c",
         "name": "API Produtos",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": ""
@@ -19,7 +19,14 @@
                         "localhost"
                     ],
                     "port": "8000"
-                }
+                },
+                "header": [
+                    {
+                        "key": "User-Agent",
+                        "value": "Thunder Client (https://www.thunderclient.com)",
+                        "disabled": true
+                    }
+                ]
             }
         },
         {
@@ -36,7 +43,14 @@
                         "localhost"
                     ],
                     "port": "8000"
-                }
+                },
+                "header": [
+                    {
+                        "key": "User-Agent",
+                        "value": "Thunder Client (https://www.thunderclient.com)",
+                        "disabled": true
+                    }
+                ]
             }
         },
         {
@@ -53,6 +67,13 @@
                     ],
                     "port": "8000"
                 },
+                "header": [
+                    {
+                        "key": "User-Agent",
+                        "value": "Thunder Client (https://www.thunderclient.com)",
+                        "disabled": true
+                    }
+                ],
                 "body": {
                     "mode": "raw",
                     "options": {
@@ -60,7 +81,7 @@
                             "language": "json"
                         }
                     },
-                    "raw": "{\r\n    \"id\":34,\r\n    \"nome\": \"Tablet DEF\",\r\n    \"detalhes\": {\r\n        \"marca\": \"Marca C\",\r\n        \"preco\": 800.00,\r\n        \"estoque\": 20,\r\n        \"especificacoes\": {\r\n            \"tela\": \"10.1 polegadas\",\r\n            \"processador\": \"Snapdragon 660\",\r\n            \"memoria\": \"4GB RAM\",\r\n            \"armazenamento\": \"64GB\"\r\n        }\r\n    }\r\n}"
+                    "raw": "{\n    \"id\":34,\n    \"nome\": \"Tablet DEF\",\n    \"detalhes\": {\n        \"marca\": \"Marca C\",\n        \"preco\": 800.00,\n        \"estoque\": 20,\n        \"especificacoes\": {\n            \"tela\": \"10.1 polegadas\",\n            \"processador\": \"Snapdragon 660\",\n            \"memoria\": \"4GB RAM\",\n            \"armazenamento\": \"64GB\"\n        }\n    }\n}"
                 }
             }
         },
@@ -80,6 +101,13 @@
                     ],
                     "port": "8000"
                 },
+                "header": [
+                    {
+                        "key": "User-Agent",
+                        "value": "Thunder Client (https://www.thunderclient.com)",
+                        "disabled": true
+                    }
+                ],
                 "body": {
                     "mode": "raw",
                     "options": {
@@ -87,7 +115,7 @@
                             "language": "json"
                         }
                     },
-                    "raw": "{\r\n  \"nome\": \"Smartphone XYZ Atualizado\",\r\n  \"detalhes\": {\r\n      \"marca\": \"Marca B\",\r\n      \"preco\": 1300.00,\r\n      \"estoque\": 6545,\r\n      \"especificacoes\": {\r\n          \"tela\": \"6.5 polegadas\",\r\n          \"processador\": \"Snapdragon 888\",\r\n          \"memoria\": \"8GB RAM\",\r\n          \"armazenamento\": \"128GB\"\r\n      }\r\n  }\r\n}"
+                    "raw": "{\n  \"nome\": \"Smartphone XYZ Atualizado\",\n  \"detalhes\": {\n      \"marca\": \"Marca B\",\n      \"preco\": 1300.00,\n      \"estoque\": 6545,\n      \"especificacoes\": {\n          \"tela\": \"6.5 polegadas\",\n          \"processador\": \"Snapdragon 888\",\n          \"memoria\": \"8GB RAM\",\n          \"armazenamento\": \"128GB\"\n      }\n  }\n}"
                 }
             }
         },
@@ -106,7 +134,14 @@
                         "localhost"
                     ],
                     "port": "8000"
-                }
+                },
+                "header": [
+                    {
+                        "key": "User-Agent",
+                        "value": "Thunder Client (https://www.thunderclient.com)",
+                        "disabled": true
+                    }
+                ]
             }
         }
     ]
