@@ -1,5 +1,5 @@
 {
-  "1": {
+  "101": {
         "id": 101,
         "nome": "Smartphone XYZ",
         "detalhes": {
@@ -14,7 +14,7 @@
             }
         }
   },
-  "2": {
+  "102": {
         "id": 102,
         "nome": "Notebook ABC",
         "detalhes": {
@@ -29,8 +29,8 @@
             }
         }
   },
-  "3": {
-        "id": 101,
+  "103": {
+        "id": 103,
         "nome": "Smartphone XYZ",
         "detalhes": {
             "marca": "Marca A",
@@ -44,8 +44,8 @@
             }
         }
   },
-  "4": {
-        "id": 102,
+  "104": {
+        "id": 104,
         "nome": "Notebook ABC",
         "detalhes": {
             "marca": "Marca B",
@@ -59,8 +59,8 @@
             }
         }
   },
-  "5": {
-        "id": 101,
+  "105": {
+        "id": 105,
          "nome": "Smartphone XYZ",
          "detalhes": {
              "marca": "Marca A",
@@ -74,8 +74,8 @@
                 }
           }
   },
-  "6": {
-        "id": 102,
+  "106": {
+        "id": 106,
         "nome": "Notebook ABC",
         "detalhes": {
             "marca": "Marca B",
